@@ -22,17 +22,12 @@ aornothing = (a, b) ->
 # Functors
 run = (funct, a, b) -> funct(a,b)
 
-# This object
-what = {x: 'quantum entanglement'}
-xInContext = ->
-	@x = what.x
-	print @x
-
 
 # Test
+sq3 = square 3
 print 'Functions Coffee'
-print 'square(3) = ' + square(3) # 9
-print 'aorb(6,7) = ' + aorb(6,7) # 7
-print 'aornothing(6,7) = ' + aornothing(6,7) # undefined
-print 'run(aorb, 6,7) = ' + run(aorb,6,7) # 7
-print 'xInContext = ' + xInContext() # 7
+print '================'
+print "square(3) = #{sq3}" # 9
+print "aorb(6,7) = #{aorb(6,7)}" # 7
+print "aornothing(6,7) = #{aornothing(6,7)}" # undefined
+print "run(aorb, 6,7) = #{run(aorb,6,7)}" # 7
